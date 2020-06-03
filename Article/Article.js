@@ -112,9 +112,9 @@ const data = [
   Step 5: Add a new article to the array. Make sure it is in the same format as the others. Refresh the page to see the new article.
 
 */
+let container = document.querySelector(".articles");
 
 function articleMaker(object) {
-  let container = document.querySelector(".articles");
   let articleDiv = document.createElement("div");
   let h2 = document.createElement("h2");
   let pDate = document.createElement("p");
@@ -158,6 +158,8 @@ data.forEach((articleObject) => {
   const articleDiv = articleMaker(articleObject);
   container.appendChild(articleDiv);
 });
+
+console.log("Here are the articles array: ", data);
 
 // testing our makePanel function
 // const theTestArticle = articleMaker({
